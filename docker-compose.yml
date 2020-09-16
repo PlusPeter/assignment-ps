@@ -1,0 +1,7 @@
+version: '3'
+services:
+  pubsub:
+    image: pluspeterpublic/psemulator:0.1.0
+    command: "/start.sh"
+    ports:
+      - "8085:8085"
