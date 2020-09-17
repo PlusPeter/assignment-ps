@@ -13,7 +13,7 @@ It publishes messages on a topic in the following JSON format:
 }
 ```
 
-When you run the program, it publishes 10 messages on this topic. From data 1 to 5 of type A and from data 1 to 5 of type B.
+When you run the program, it publishes 10 messages on this topic. With data from 1 to 5 of type A and from 1 to 5 of type B.
 
 Make sure that the messages are correctly delivered on the topic.
 
@@ -41,7 +41,7 @@ func printToFile(f *os.File, s string) error {
 }
 ```
 
-It is likely that this function fails, and the concept is to represent an interaction with a third-party service. We assume that the error is always temporary and so, if it returns an error, it will succeed at a later stage. We want you to use ack/nack accordingly, in order to reprocess the message later.
+It is likely that this function fails, and the concept is to represent an interaction with a third-party service. We assume that the error is always temporary and so, if it returns an error, it will eventually succeed if called again. We want you to use ack/nack accordingly, in order to reprocess the message later.
 
 You will need a project ID, a topic ID, a subscription ID, a message type and a file path as parameters.
 
